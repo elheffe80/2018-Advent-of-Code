@@ -5,15 +5,12 @@ frequent_numbers = [number]
 found = False
 
 while not found:
-    with open("\\Users\\bheffron\\Nextcloud\\Projects\\Advent of Code 2018\\Day 02\\input.txt") as input_text:
+    with open("\\Users\\bheffron\\Nextcloud\\Projects\\2018-Advent-of-Code\\Day 01b\\input.txt") as input_text:
         for line in input_text:
-            number += int(line)
+            number = number + int(line)
 
-            if str(number) in frequent_numbers:
-                print("answer: " + number)
+            if number in frequent_numbers:
+                print("answer: " + str(number))
                 found = True
                 break
-            frequent_numbers.append(line)
-            print(number)
-        #print(str(number))
-print("this is a test")
+            frequent_numbers.append(number)
